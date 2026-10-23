@@ -1,43 +1,39 @@
 #include<iostream>
 using namespace std;
 
-class Animal
+class Father
 {
     public:
-    void eat()
+    void work()
     {
-        cout<<"Animal is eating"<<endl;
+        cout<<"Father works hard"<<endl;
     }
 };
 
-class Dog:public Animal
-{
-public:
-void bark()
-{
-    cout<<"Dog is barking"<<endl;
-}
-};
-
-class Cat:public Animal
+class Mother
 {
     public:
-    void meow()
+    void cook()
     {
-        cout<<"Cat is meowing";
+        cout<<"Mother cooks very tasty food"<<endl;
+    }
+};
+
+class Child:public Father,public Mother
+{
+    public:
+    void play()
+    {
+        cout<<"Child loves to play"<<endl;
     }
 };
 
 int main()
 {
-    Dog d;
-    Cat c;
-
-    d.bark();
-    d.eat();
-
-    c.meow();
-    c.eat();
+    Child c;
+    c.work();
+    c.cook();
+    c.play();
 
     return 0;
 }
